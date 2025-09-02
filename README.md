@@ -9,13 +9,13 @@ El **código fuente completo** está en un repositorio **privado** y se comparte
 
 ## Índice
 1. [Qué es](#que-es)
-2. [Tecnologías y arquitectura (alto nivel)](#tecnologias-y-arquitectura-alto-nivel)
-3. [Login](#login)
-4. [Crear mi ruta](#crear-mi-ruta)
-5. [Subir mis rutas](#subir-mis-rutas)
-6. [Todos mis proyectos](#todos-mis-proyectos)
-7. [Ver mapa](#ver-mapa)
-8. [Demo en vídeo](#demo-en-video)
+2. [Trabajo Fin de Máster](#tfm)
+3. [Tecnologías y arquitectura (alto nivel)](#tecnologias-y-arquitectura-alto-nivel)
+4. [Login](#login)
+5. [Crear mi ruta](#crear-mi-ruta)
+6. [Subir mis rutas](#subir-mis-rutas)
+7. [Todos mis proyectos](#todos-mis-proyectos)
+8. [Ver mapa](#ver-mapa)
 9. [Capturas](#capturas)
 10. [Solicitar acceso al código](#solicitar-acceso-al-codigo)
 11. [Autor y contacto](#autor-y-contacto)
@@ -27,6 +27,20 @@ El **código fuente completo** está en un repositorio **privado** y se comparte
 
 **TravesIA** es un asistente para planificar travesías de montaña.  
 Combina mapa interactivo, gestión de tracks y puntos de interés, y un planificador asistido por IA para proponer itinerarios según días, dificultad y preferencias.
+
+[Volver al índice](#indice)
+
+---
+
+<h2 id="tfm">Trabajo Fin de Máster</h2>
+
+Este proyecto se ha desarrollado como **Trabajo Fin de Máster (TFM)** del  
+**Máster en Inteligencia Artificial de la Universidad Alfonso X El Sabio**.
+
+El objetivo académico ha sido **diseñar y validar** una herramienta práctica de planificación de travesías que combine **IA** y **datos geoespaciales**, priorizando:
+- la generación de propuestas personalizadas a partir de preferencias del usuario,
+- la integración de fuentes abiertas,
+- y una arquitectura preparada para crecer.
 
 [Volver al índice](#indice)
 
@@ -225,18 +239,9 @@ Combina mapa interactivo, gestión de tracks y puntos de interés, y un planific
 
 ---
 
-<h2 id="demo-en-video">Demo en vídeo</h2>
-
-Enlace (no listado): _añade aquí tu URL de YouTube/Drive_
-
-[Volver al índice](#indice)
-
----
-
 <h2 id="capturas">Capturas</h2>
 
 Las capturas usadas están en la carpeta `assets/`.  
-Formato recomendado: PNG/JPG ≤ 1 MB, ancho 1280–1600 px.
 
 [Volver al índice](#indice)
 
@@ -246,7 +251,7 @@ Formato recomendado: PNG/JPG ≤ 1 MB, ancho 1280–1600 px.
 
 El repositorio con el **código** es **privado**.  
 Si te interesa revisarlo (recruiters, profesorado o colaboradores), escribe a **gescoi.san@gmail.com** indicando el motivo.  
-También puedes abrir una *issue* titulada **Access request**.
+O bien abre una [issue](../../issues/new?title=Access%20request) titulada **Access request**.
 
 [Volver al índice](#indice)
 
@@ -254,7 +259,7 @@ También puedes abrir una *issue* titulada **Access request**.
 
 <h2 id="autor-y-contacto">Autor y contacto</h2>
 
-**Guillem Sánchez**  
+**Guillem Sánchez Escoi**  
 Email: **gescoi.san@gmail.com** · GitHub: **guisantes1**
 
 [Volver al índice](#indice)
@@ -265,6 +270,6 @@ Email: **gescoi.san@gmail.com** · GitHub: **guisantes1**
 
 Este repositorio público contiene material informativo (texto, capturas).  
 El **código fuente** no se publica aquí.  
-© 2025 Guillem Sánchez. Todos los derechos reservados.
+© 2025 Guillem Sánchez Escoi. Todos los derechos reservados.
 
 [Volver al índice](#indice)
