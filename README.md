@@ -5,29 +5,35 @@ El **código fuente completo** está en un repositorio **privado** y se comparte
 
 ---
 
+<a id="indice"></a>
+
 ## Índice
-1. [Qué es](#qué-es)
-2. [Tecnologías y arquitectura (alto nivel)](#tecnologías-y-arquitectura-alto-nivel)
+1. [Qué es](#que-es)
+2. [Tecnologías y arquitectura (alto nivel)](#tecnologias-y-arquitectura-alto-nivel)
 3. [Login](#login)
 4. [Crear mi ruta](#crear-mi-ruta)
 5. [Subir mis rutas](#subir-mis-rutas)
 6. [Todos mis proyectos](#todos-mis-proyectos)
-7. [Ver Mapa](#ver-mapa)
-8. [Demo en vídeo](#demo-en-vídeo)
+7. [Ver mapa](#ver-mapa)
+8. [Demo en vídeo](#demo-en-video)
 9. [Capturas](#capturas)
-10. [Solicitar acceso al código](#solicitar-acceso-al-código)
+10. [Solicitar acceso al código](#solicitar-acceso-al-codigo)
 11. [Autor y contacto](#autor-y-contacto)
 12. [Aviso](#aviso)
 
 ---
 
-## Qué es
+<h2 id="que-es">Qué es</h2>
+
 **TravesIA** es un asistente para planificar travesías de montaña.  
 Combina mapa interactivo, gestión de tracks y puntos de interés, y un planificador asistido por IA para proponer itinerarios según días, dificultad y preferencias.
 
+[Volver al índice](#indice)
+
 ---
 
-## Tecnologías y arquitectura (alto nivel)
+<h2 id="tecnologias-y-arquitectura-alto-nivel">Tecnologías y arquitectura (alto nivel)</h2>
+
 - **Frontend**: aplicación SPA con React, diseño responsive.
 - **Backend**: API en Python (framework moderno para APIs REST).
 - **Autenticación**: JWT.
@@ -37,9 +43,12 @@ Combina mapa interactivo, gestión de tracks y puntos de interés, y un planific
 
 > Se mantiene el detalle a alto nivel para no exponer decisiones internas. La implementación completa reside en un repositorio privado.
 
+[Volver al índice](#indice)
+
 ---
 
-## Login
+<h2 id="login">Login</h2>
+
 **Objetivo:** acceso seguro a las funciones personales (rutas, proyectos, opiniones).
 
 **Qué muestra**
@@ -68,124 +77,194 @@ Combina mapa interactivo, gestión de tracks y puntos de interés, y un planific
   <sub><b>Figura 2.</b> Formulario de alta de nueva cuenta</sub>
 </p>
 
+[Volver al índice](#indice)
 
 ---
 
-## Crear mi ruta
+<h2 id="crear-mi-ruta">Crear mi ruta</h2>
+
 **Objetivo:** asistente para definir una travesía con parámetros de usuario.
 
 **Qué muestra**
-- Formulario guiado: días, tipo de ruta (lineal/circular), destino, puntos intermedios, nivel de dificultad, pernocta prevista.
+- Formulario guiado: días, tipo de ruta (lineal/circular), dificultad, pernocta, puntos de paso.
 - Vista previa de resultados y estimaciones.
 
 **Acciones clave**
 - Generar una propuesta inicial asistida por IA.
-- Ajustar parámetros y volver a calcular.
+- Ajustar parámetros y recalcular.
 - Guardar borrador como proyecto.
 
 **Resultados**
 - Resumen de la propuesta (distancia, desnivel, puntos clave).
-- En versiones avanzadas: exportación a GPX/PDF (opción prevista en roadmap).
+- Exportaciones previstas: GPX (ruta completa / por días), visualización en mapa y (roadmap) PDF.
 
-**Captura sugerida**
-- `assets/crear-mi-ruta.png`
+**Capturas**
+
+<p align="center">
+  <img src="assets/crear_mi_ruta_3.png" alt="Figura 3 — Relleno de parámetros y detección en tiempo real con previsualización en mapa" width="840"><br/>
+  <sub><b>Figura 3.</b> Relleno de parámetros y detección en tiempo real (izquierda) con previsualización de puntos en el mapa (derecha)</sub>
+</p>
+
+<p align="center">
+  <img src="assets/crear_mi_ruta_1.png" alt="Figura 4 — Confirmación de parámetros y acción de Generar propuestas" width="840"><br/>
+  <sub><b>Figura 4.</b> Confirmación de parámetros y botón <i>Generar propuestas</i></sub>
+</p>
+
+<p align="center">
+  <img src="assets/crear_mi_ruta_2.png" alt="Figura 5 — Propuestas generadas con desglose por días, puntuación y opciones de exportación" width="840"><br/>
+  <sub><b>Figura 5.</b> Propuestas generadas: desglose por días, puntuación y acciones (descargar GPX, ZIP por días, ver en mapa)</sub>
+</p>
+
+[Volver al índice](#indice)
 
 ---
 
-## Subir mis rutas
+<h2 id="subir-mis-rutas">Subir mis rutas</h2>
+
 **Objetivo:** subir y gestionar archivos GPX del usuario.
 
 **Qué muestra**
-- Selector de archivos con validaciones básicas (extensión GPX, tamaño).
-- Lista de rutas subidas con fecha y estado de procesado.
+- Zona de *drag & drop* para **archivos GPX**, con validaciones básicas.
+- Campos de **fecha** y **descripción** de la ruta.
+- Visualización de la ruta en el mapa con **waypoints detectados**.
+- Edición de **tipo/descripción/fotos** de cada waypoint.
 
 **Acciones clave**
 - Subir, renombrar y eliminar rutas.
-- Ver detalles de cada ruta: distancia y puntos clave detectados.
+- Editar metadatos y waypoints.
+- Guardar ruta procesada.
 
 **Notas**
-- Se evita exponer metadatos sensibles en el repo público.
-- Procesado del GPX para obtener estadísticas básicas y puntos de interés.
+- Se evita exponer metadatos sensibles en este repo público.
+- El procesado del GPX extrae estadísticas básicas y puntos de interés.
 
-**Captura sugerida**
-- `assets/subir-mis-rutas.png`
+**Capturas**
+
+<p align="center">
+  <img src="assets/subir_mis_rutas_1.png" alt="Figura 6 — Zona de subida (drag & drop), fecha y descripción" width="840"><br/>
+  <sub><b>Figura 6.</b> Zona de subida del GPX (drag & drop) con fecha y descripción</sub>
+</p>
+
+<p align="center">
+  <img src="assets/subir_mis_rutas_2.png" alt="Figura 7 — Ruta renderizada en mapa con waypoints y editor de waypoint" width="840"><br/>
+  <sub><b>Figura 7.</b> Ruta renderizada en mapa; edición de un waypoint (tipo, descripción y fotos)</sub>
+</p>
+
+[Volver al índice](#indice)
 
 ---
 
-## Todos mis proyectos
-**Objetivo:** gestión de proyectos de planificación guardados por el usuario.
+<h2 id="todos-mis-proyectos">Todos mis proyectos</h2>
+
+**Objetivo:** visualizar y gestionar todas las rutas del usuario en un mapa único.
 
 **Qué muestra**
-- Listado con estado (borrador, en revisión, confirmado).
-- Filtros por fecha, zona, días y dificultad.
+- Mapa con **todas las rutas subidas** y sus **waypoints**.
+- Acciones contextuales sobre cada ruta/waypoint (ver, borrar, editar).
 
 **Acciones clave**
-- Abrir un proyecto para editarlo.
-- Duplicar como base para una nueva propuesta.
-- Eliminar un proyecto.
+- Clic en una ruta para **centrar y destacar** su trazado.
+- Clic en un waypoint para **editar su ficha** (tipo, descripción, fotos).
+- Borrar rutas desde el panel de gestión.
 
-**Resultados**
-- Registro de decisiones y parámetros usados.
-- Historial mínimo para trazabilidad.
+**Notas**
+- Esta vista facilita una revisión rápida del histórico personal de rutas.
 
-**Captura sugerida**
-- `assets/todos-mis-proyectos.png`
+**Capturas**
+
+<p align="center">
+  <img src="assets/todas_mis_rutas_1.png" alt="Figura 8 — Mapa con todas las rutas del usuario y sus waypoints" width="840"><br/>
+  <sub><b>Figura 8.</b> Mapa con todas las rutas del usuario (waypoints visibles)</sub>
+</p>
+
+<p align="center">
+  <img src="assets/todas_mis_rutas_2.png" alt="Figura 9 — Ruta seleccionada y destacada con su trazado y marcadores" width="840"><br/>
+  <sub><b>Figura 9.</b> Ruta seleccionada con su trazado y marcadores</sub>
+</p>
+
+<p align="center">
+  <img src="assets/todas_mis_rutas_3.png" alt="Figura 10 — Edición de un waypoint (tipo, descripción y fotos)" width="840"><br/>
+  <sub><b>Figura 10.</b> Edición de un waypoint (tipo, descripción y fotos)</sub>
+</p>
+
+[Volver al índice](#indice)
 
 ---
 
-## Ver Mapa
+<h2 id="ver-mapa">Ver mapa</h2>
+
 **Objetivo:** explorar el mapa con tracks, waypoints y capas temáticas.
 
 **Qué muestra**
-- Mapa interactivo con capas de:
-  - Tracks del usuario.
-  - Waypoints (refugios, picos, puntos de agua, posibles zonas de vivac).
-- Panel lateral con información del elemento seleccionado.
+- Mapa general con **puntos de interés importados de OpenStreetMap** (picos, refugios, etc.).
+- **Marcadores rojos**: elementos con **opiniones** de usuarios; **azules**: sin opiniones.
+- Barra inferior con **filtros** (por tipo/categoría) y acciones rápidas (p. ej., eliminar visibles, actualizar elevación).
 
 **Acciones clave**
-- Activar/desactivar capas.
-- Seleccionar elementos para ver detalles.
-- Enlazar un elemento del mapa como punto de la planificación.
+- Filtrar por tipo de punto y mostrar/ocultar conjuntos.
+- Seleccionar un punto para ver su ficha.
+- Editar la **descripción** y **tipo** del waypoint; añadir **opiniones** y **fotos** en pestañas.
 
 **Notas**
-- Se usan datos abiertos y fuentes cartográficas compatibles.
-- En futuras versiones: soporte offline y caché de teselas (PWA).
+- Se emplean datos abiertos y fuentes cartográficas compatibles.
+- Roadmap: soporte PWA/offline y caché de teselas.
 
-**Captura sugerida**
-- `assets/ver-mapa.png`
+**Capturas**
+
+<p align="center">
+  <img src="assets/ver_mapa_1.png" alt="Figura 11 — Mapa general con puntos OSM; rojo = con opiniones" width="840"><br/>
+  <sub><b>Figura 11.</b> Mapa general con puntos de interés (OpenStreetMap). Los marcadores en rojo indican que el punto tiene opiniones.</sub>
+</p>
+
+<p align="center">
+  <img src="assets/ver_mapa_2.png" alt="Figura 12 — Ficha de punto con editor a la izquierda y pestañas de opiniones/imágenes a la derecha" width="840"><br/>
+  <sub><b>Figura 12.</b> Ficha de un punto: editor de nombre/tipo/descripción (izquierda) y pestañas de <i>Opiniones</i> / <i>Imágenes</i> (derecha).</sub>
+</p>
+
+[Volver al índice](#indice)
 
 ---
 
-## Demo en vídeo
-Enlace (no listado): añade aquí tu URL de YouTube o Drive.
+<h2 id="demo-en-video">Demo en vídeo</h2>
 
----
-
-## Capturas
-Coloca las imágenes en `assets/` y referencia los nombres anteriores:
-- `assets/login.png`
-- `assets/crear-mi-ruta.png`
-- `assets/subir-mis-rutas.png`
-- `assets/todos-mis-proyectos.png`
-- `assets/ver-mapa.png`
-
-Ejemplo de inserción en el README:
-```markdown
-![Login](assets/login.png)
-
-## Demo en vídeo
 Enlace (no listado): _añade aquí tu URL de YouTube/Drive_
 
-## Solicitar acceso al código
+[Volver al índice](#indice)
+
+---
+
+<h2 id="capturas">Capturas</h2>
+
+Las capturas usadas están en la carpeta `assets/`.  
+Formato recomendado: PNG/JPG ≤ 1 MB, ancho 1280–1600 px.
+
+[Volver al índice](#indice)
+
+---
+
+<h2 id="solicitar-acceso-al-codigo">Solicitar acceso al código</h2>
+
 El repositorio con el **código** es **privado**.  
 Si te interesa revisarlo (recruiters, profesorado o colaboradores), escribe a **gescoi.san@gmail.com** indicando el motivo.  
-También puedes abrir una *issue* titulada “Access request”.
+También puedes abrir una *issue* titulada **Access request**.
 
-## Autor
+[Volver al índice](#indice)
+
+---
+
+<h2 id="autor-y-contacto">Autor y contacto</h2>
+
 **Guillem Sánchez**  
 Email: **gescoi.san@gmail.com** · GitHub: **guisantes1**
 
-## Aviso
+[Volver al índice](#indice)
+
+---
+
+<h2 id="aviso">Aviso</h2>
+
 Este repositorio público contiene material informativo (texto, capturas).  
 El **código fuente** no se publica aquí.  
 © 2025 Guillem Sánchez. Todos los derechos reservados.
+
+[Volver al índice](#indice)
