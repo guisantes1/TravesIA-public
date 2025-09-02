@@ -44,7 +44,7 @@ Combina mapa interactivo, gestión de tracks y puntos de interés, y un planific
 
 **Qué muestra**
 - Formulario con campos **Email o usuario** y **Contraseña**.
-- Enlace **“Crear una nueva cuenta”** para alta de usuario.
+- Enlace **“Crear una nueva cuenta”** que abre el formulario de alta.
 - Mensajes claros de validación/errores.
 
 **Acciones clave**
@@ -56,9 +56,16 @@ Combina mapa interactivo, gestión de tracks y puntos de interés, y un planific
 - Datos minimizados y protegidos (HTTPS, tokens de corta vida y refresco).
 - En este repo público no se exponen endpoints ni credenciales.
 
-**Captura**
+**Capturas**
+
 <p align="center">
-  <img src="assets/login_1.png" alt="Pantalla de Login — TravesIA" width="720">
+  <img src="assets/login_1.png" alt="Figura 1 — Pantalla de inicio de sesión (Login) — TravesIA" width="840"><br/>
+  <sub><b>Figura 1.</b> Pantalla de inicio de sesión</sub>
+</p>
+
+<p align="center">
+  <img src="assets/login_2.png" alt="Figura 2 — Formulario de alta de nueva cuenta — TravesIA" width="840"><br/>
+  <sub><b>Figura 2.</b> Formulario de alta de nueva cuenta</sub>
 </p>
 
 
